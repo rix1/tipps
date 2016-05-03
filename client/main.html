@@ -1,25 +1,41 @@
 <head>
-  <title>simple</title>
+    <title>Tipps</title>
+
+    <script src="https://use.typekit.net/eiy6iut.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <link rel="icon" type="image/ico" href="images/favicon.ico">
+
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
-
-  {{> hello}}
-  {{> info}}
+    <div class="layout">
+        <div class="col left-col">
+            <div class="imgWrapper">
+                <img src="images/iphone2.png" alt="iphone" />
+            </div>
+        </div>
+        <div class="right-col">
+            {{> feedbackForm}}
+        </div>
+    </div>
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
+<!-- <template name="hello">
+<button class="testKnapp">Click Me</button>
+<p>You've pressed the button {{counter}} times.</p>
+</template> -->
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com">Discussions</a></li>
-  </ul>
+<template name="feedbackForm">
+    <form class="center-form">
+        <h1>tipps</h1>
+        {{#if finished}}
+            <p class="ingress limit"><em>Takk for interessen!<br>Du vil få en epost så snart vi har mer info om Tipps!</em></p>
+        {{else}}
+        <p class="ingress">
+            Ønsker du å melde deg opp til pilottesting?
+        </p>
+            <input type="email" name="emailField" placeholder="Epost" required autocomplete="off">
+            <button type="submit"  name="button">Gi meg tipps!</button>
+        {{/if}}
+    </form>
 </template>

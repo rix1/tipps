@@ -1,0 +1,122 @@
+/* CSS declarations go here */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+button,hr{overflow:visible}img,legend{border:0}legend,td,th{padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre,textarea{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}
+
+/*Box resetting trick*/
+*{ box-sizing: border-box;}
+
+@import 'colors';
+
+html, body{
+	background-color: @whitespace;
+	min-width: 100vw;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+
+body{
+	font-size: 40px;
+	font-family: "lato",sans-serif;
+	// font-weight: 700;
+}
+
+.orange{
+	background-color: @orange;
+
+}
+.pink{
+	background-color: @pink;
+}
+
+.center-flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.layout{
+	height: 100vh;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.col{
+
+	.imgWrapper{
+		height: 100%;
+
+		img{
+			width: 100%;
+			height: auto;;
+		}
+	}
+
+}
+
+.left-col{
+	flex: 1;
+	flex-basis: 300px;
+	.center-flex;
+	// Place image on bottom on mobile devices
+	@media screen and (max-width: 800px){
+		order:1;
+	}
+}
+
+.outline-focus{
+	&:focus {
+		box-shadow: 0 0 0 2pt @neutralbeige;
+	}
+}
+
+.limit{
+	max-width: 500px;
+}
+
+form {
+	h1{
+		color: @seagreen;
+	}
+
+	.ingress{
+		color: darken(@neutralbrown, 10%);
+	}
+
+	input{
+		padding: 0 25px 5px;
+		border-radius: 50px;
+		border: 2px solid @neutralbrown;
+		outline: none;
+		max-width: 500px;
+		width: 100%;
+		.outline-focus;
+		font-size: 100%;
+		color: darken(darkgrey,40%);
+	}
+	button{
+		border-radius: 50px;
+		padding: 5px 30px 10px;
+		border: none;
+		background-color: @seagreen;
+		color: @whitespace;
+		margin: 30px 0;
+		outline: none;
+		.outline-focus;
+		font-size: 80%;
+
+		&:active{
+			background-color: darken(@seagreen, 4%);
+		}
+	}
+}
+
+.right-col{
+	flex: 3;
+	flex-basis: 300px;
+	.center-flex;
+
+	padding: 50px;
+	text-align: center;
+}
