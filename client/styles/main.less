@@ -11,7 +11,7 @@ html, body{
 	background-color: @whitespace;
 	min-width: 100vw;
 	min-height: 100vh;
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 
@@ -35,6 +35,11 @@ body{
 	align-items: center;
 }
 
+.err{
+	color: @pink;
+	font-style: italic;
+}
+
 .layout{
 	height: 100vh;
 	display: flex;
@@ -46,6 +51,7 @@ body{
 
 	.imgWrapper{
 		height: 100%;
+		max-width: 400px;
 
 		img{
 			width: 100%;
@@ -116,6 +122,10 @@ form {
 	flex: 3;
 	flex-basis: 300px;
 	.center-flex;
+
+	@media screen and (max-width: 800px){
+		
+	}
 
 	padding: 50px;
 	text-align: center;

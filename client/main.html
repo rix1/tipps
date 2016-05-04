@@ -45,12 +45,13 @@
     <form class="center-form">
         <h1>tipps</h1>
         {{#if finished}}
-        <p class="ingress limit"><em>Takk for interessen!<br>Du vil få en epost så snart vi har mer info om Tipps!</em></p>
+            <p class="ingress response">{{responseMsg}}</p>
+            <button type="button"  class="resetBtn" name="button">Gå tilbake</button>
         {{else}}
         <p class="ingress">
             Ønsker du å melde deg opp til pilottesting?
         </p>
-        <input type="email" name="emailField" placeholder="Epost" required autocomplete="off">
+        <input type="email" name="emailField" placeholder="Epost" autocomplete="off">
         <button type="submit"  name="button">Gi meg tipps!</button>
         {{/if}}
     </form>
