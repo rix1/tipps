@@ -16,13 +16,17 @@ Meteor.methods({
         console.log(`SERVER: received email ${email}`);
 
         if(re.test(email)){
-            SignUps.insert({
-                email,
-                createdAt: new Date(), // current time
-            });
-            return `Takk for interessen! Du er Tippser nummer ${SignUps.find().count()} 😄 Vi sender en epost så snart vi har mer info om Tipps!`;
+            let user = SignUps.findOne({"email": email})
+            if(!user){
+                SignUps.insert({
+                    email,
+                    createdAt: new Date(), // current time
+                });
+                return `Takk for interessen! Du er Tippser nummer ${SignUps.find().count()} 😄 Vi sender en epost så snart vi har mer info om Tipps!`;
+            }
+            return "Ingen grunn til å registrere seg to ganger! Epost-addressen finnes allerede 😉"
         }else{
-            return "Wops! Epost-addressen er feil eller allerede registrert...";
+            return "Wops! Epost-addressen er ugyldig...";
         }
 
     }
