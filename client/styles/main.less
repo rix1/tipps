@@ -6,12 +6,14 @@ button,hr{overflow:visible}img,legend{border:0}legend,td,th{padding:0}html{font-
 *{ box-sizing: border-box;}
 
 @import 'colors';
+@import 'test';
 
 html, body{
 	background-color: @whitespace;
 	min-width: 100vw;
 	min-height: 100vh;
 	// overflow: hidden;
+	.transition( all 200ms ease-in );
 }
 
 
@@ -19,6 +21,7 @@ body{
 	font-size: 40px;
 	font-family: "lato",sans-serif;
 	// font-weight: 700;
+	opacity: 0;
 }
 
 .orange{
@@ -33,6 +36,19 @@ body{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.center-form{
+	.logo{
+		// max-width: 100px;
+		// margin: 0;
+		width: 40px;
+		height: 40px;
+	}
+	.heading{
+		display: inline-flex;
+		.transition( all 200ms ease-in );
+	}
 }
 
 .err{
@@ -73,7 +89,7 @@ body{
 
 .outline-focus{
 	&:focus {
-		box-shadow: 0 0 0 2pt @neutralbeige;
+		box-shadow: 0 0 4pt 2pt @blue;
 	}
 }
 
@@ -81,12 +97,24 @@ body{
 	max-width: 500px;
 }
 
+p{
+	img{
+		// display: inline;
+		width: 1em;
+		height: 1em;
+	}
+}
+
 form {
 	h1{
-		color: @seagreen;
+		color: @orange;
+		margin: 0;
 	}
 
 	.ingress{
+		margin: 1.5em auto;
+		max-width: 600px;
+		font-size: .5em;
 		color: darken(@neutralbrown, 10%);
 	}
 
@@ -98,33 +126,38 @@ form {
 		max-width: 500px;
 		width: 100%;
 		.outline-focus;
-		font-size: 100%;
+		font-size: 80%;
 		color: darken(darkgrey,40%);
 	}
 	button{
 		border-radius: 50px;
 		padding: 5px 30px 10px;
 		border: none;
-		background-color: @seagreen;
+		background-color: @orange;
 		color: @whitespace;
 		margin: 30px 0;
 		outline: none;
 		.outline-focus;
-		font-size: 80%;
+		font-size: 70%;
 
 		&:active{
-			background-color: darken(@seagreen, 4%);
+			background-color: darken(@orange, 4%);
 		}
 	}
+}
+
+.txt-orange{
+	color: @orange !important;
 }
 
 .right-col{
 	flex: 3;
 	flex-basis: 300px;
 	.center-flex;
+	justify-content: flex-start;
 
 	@media screen and (max-width: 800px){
-		
+
 	}
 
 	padding: 50px;

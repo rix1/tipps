@@ -22,7 +22,7 @@ Meteor.methods({
             });
             return `Takk for interessen! Du er Tippser nummer ${SignUps.find().count()} 😄 Vi sender en epost så snart vi har mer info om Tipps!`;
         }else{
-            return "Wops! Epost-addressen er feil eller allerede registrert";
+            return "Wops! Epost-addressen er feil eller allerede registrert...";
         }
 
     }

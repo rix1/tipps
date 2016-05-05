@@ -7,6 +7,13 @@ Template.feedbackForm.onCreated(function helloOnCreated() {
     // counter starts at 0
     this.finished = new ReactiveVar(false);
     this.responseMsg = new ReactiveVar("");
+
+    console.log("jeg er lastet...");
+
+    Meteor.setTimeout(function () {
+        $('body').css('opacity', '1');
+        console.log("jajaj");
+    }, 10);
 });
 
 Template.feedbackForm.helpers({
