@@ -51,6 +51,11 @@ body{
 	}
 }
 
+.tipps-icon{
+	margin: 0;
+	margin-bottom: -3px;
+}
+
 .err{
 	color: @pink;
 	font-style: italic;
@@ -89,7 +94,7 @@ body{
 
 .outline-focus{
 	&:focus {
-		box-shadow: 0 0 4pt 2pt @blue;
+		box-shadow: 0 0 4pt 2pt fade(@blue,50%);
 	}
 }
 
@@ -121,7 +126,8 @@ form {
 	input{
 		padding: 0 25px 5px;
 		border-radius: 50px;
-		border: 2px solid @neutralbrown;
+		border: 2px solid fade(@neutralbrown, 50%);
+		// border: 2px solid @neutralbrown;
 		outline: none;
 		max-width: 500px;
 		width: 100%;
@@ -141,13 +147,21 @@ form {
 		font-size: 70%;
 
 		&:active{
-			background-color: darken(@orange, 4%);
+			background-color: darken(@orange, 8%);
+		}
+		&:hover{
+			background-color: darken(@orange, 5%);
 		}
 	}
 }
 
 .txt-orange{
 	color: @orange !important;
+}
+
+.tipps-inline{
+	.txt-orange;
+	font-weight: 700;
 }
 
 .right-col{

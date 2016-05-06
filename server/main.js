@@ -12,8 +12,6 @@ Meteor.startup(() => {
 Meteor.methods({
     emailHandler: (email) => {
         const re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-        console.log(re.test(email));
-        console.log(`SERVER: received email ${email}`);
 
         if(re.test(email)){
             let user = SignUps.findOne({"email": email})

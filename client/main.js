@@ -8,11 +8,8 @@ Template.feedbackForm.onCreated(function helloOnCreated() {
     this.finished = new ReactiveVar(false);
     this.responseMsg = new ReactiveVar("");
 
-    console.log("jeg er lastet...");
-
     Meteor.setTimeout(function () {
         $('body').css('opacity', '1');
-        console.log("jajaj");
     }, 10);
 });
 
@@ -41,9 +38,9 @@ Template.feedbackForm.events({
 
         Meteor.call('emailHandler', epost , (err, res) => {
             if (err) {
-                console.log(err.reason);
+                (err.reason);
                 //   target.responseField.value = "FEEEEIL";
-                console.log(err.reason);
+                (err.reason);
                 // instance.responseMsg.set(true);
                 // instance.responseMsg.set(err.reason);
 
@@ -53,7 +50,6 @@ Template.feedbackForm.events({
                 instance.responseMsg.set(res);
                 instance.finished.set(!instance.finished.get())
                 target.emailField.value = '';
-                console.log("CLIENT: epost lagret");
             }
         });
     },
