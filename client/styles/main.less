@@ -13,13 +13,13 @@ html, body{
 	min-width: 100vw;
 	min-height: 100vh;
 	// overflow: hidden;
-	.transition( all 200ms ease-in );
+	.transition( all 50ms ease-in );
 }
 
 
 body{
 	font-size: 40px;
-	font-family: "lato",sans-serif;
+	font-family: "sofia-pro",sans-serif;
 	// font-weight: 700;
 	opacity: 0;
 }
@@ -71,12 +71,27 @@ body{
 .col{
 
 	.imgWrapper{
-		height: 100%;
-		max-width: 400px;
+		min-width: 100%;
+		min-height: 100vh;
+		overflow: hidden;
+		position: relative;
 
+		// .imgz{
+		// 	// min-width: 100%;
+		// 	min-height: 100vh;
+		// 	background: url('/images/rix1.jpg') no-repeat center center fixed;
+		// 	// background-color: red;
+		// 	-webkit-background-size: cover;
+		// 	-moz-background-size: cover;
+		// 	-o-background-size: cover;
+		// 	background-size: cover;
+		// }
 		img{
-			width: 100%;
-			height: auto;;
+			position: absolute;
+			height: auto;
+			width: auto;
+			min-width: 100%;
+			min-height: 100vh;
 		}
 	}
 
@@ -88,7 +103,7 @@ body{
 	.center-flex;
 	// Place image on bottom on mobile devices
 	@media screen and (max-width: 800px){
-		order:1;
+		// order:1;
 	}
 }
 
@@ -156,12 +171,16 @@ form {
 }
 
 .txt-orange{
-	color: @orange !important;
+	color: @orange;
 }
 
 .tipps-inline{
 	.txt-orange;
 	font-weight: 700;
+}
+
+.txt-blue{
+	color: @seagreen;
 }
 
 .right-col{

@@ -1,7 +1,7 @@
 <head>
     <title>Tipps</title>
 
-    <script src="https://use.typekit.net/eiy6iut.js"></script>
+    <script src="https://use.typekit.net/mse0cfz.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <link rel="icon" type="image/ico" href="images/favicon.ico">
 
@@ -15,7 +15,7 @@
     <div class="layout">
         <div class="col left-col">
             <div class="imgWrapper">
-                <img src="images/iphone12.jpg" alt="iphone" />
+                <img src="images/rix1.jpg" alt="portrait" />
             </div>
         </div>
         <div class="right-col">
@@ -34,31 +34,23 @@
 
 <template name="tracking">
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-71084291-5', 'auto');
-    ga('send', 'pageview');
-
+        // Todo: Add tracking
     </script>
 </template>
 
 <template name="feedbackForm">
     <form class="center-form">
         <div class="heading">
-            <img src="images/tipps.png" class="logo" alt="logo" />
-            <h1>tipps</h1>
+            <h1>Velkommen</h1>
         </div>
         {{#if finished}}
         <p class="ingress response">{{responseMsg}}</p>
         <button type="button"  class="resetBtn" name="button">Gå tilbake</button>
         {{else}}
         <p class="ingress">
-            Tipps er en enkel tjeneste som hjelper deg å både bruke og spare penger, <span class="txt-orange">i situasjonen du befinner deg i</span>. Samtidig lar Tipps butikker over hele landet kommunisere med kunder som befinner seg i butikken gjennom enkle, nyttige og ikke minst uforstyrrende Tipps.
+            Du har nå landet på nettsiden til <span class="tipps-inline">RixConsult1</span>. Jeg kan hjelpe deg med alt du måtte trenge hjelp til. Det høres kanskje ambisiøst ut? Sammen med <span class="tipps-inline txt-blue">Røyrvik Consulting</span> leverer vi tjenester innen web- og mobilutvikling, grafisk design og konseptutvikling.
             <br><br>
-            Har du lyst til å prøve tipps? Legg igjen epost-addressen din, så sier vi fra så snart <img class="tipps-icon" src="images/out_64.png" alt=""/> er klart 👍
+            Trenger du hjelp av <span class="tipps-inline">RixConsult1</span>? Legg igjen epost-addressen din, så tar jeg kontakt 👍
         </p>
         <input type="email" name="emailField" placeholder="Epost" autocomplete="off">
         <div class="">
