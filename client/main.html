@@ -23,6 +23,7 @@
         </div>
     </div>
 
+    {{> app_body}}
     {{> tracking}}
 
 </body>
@@ -31,6 +32,12 @@
 <button class="testKnapp">Click Me</button>
 <p>You've pressed the button {{counter}} times.</p>
 </template> -->
+
+<template name="app_body">
+
+    {{> Template.dynamic template=main}}
+
+</template>
 
 <template name="tracking">
     <script>

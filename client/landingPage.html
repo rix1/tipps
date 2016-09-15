@@ -1,0 +1,39 @@
+<template name="landingPage">
+    <div class="loginBtn">
+        <button type="submit"  name="button">Merchant Login</button>
+    </div>
+    <div class="layout">
+        <div class="col left-col">
+            <div class="imgWrapper">
+                <img src="images/iphone12.jpg" alt="iphone" />
+            </div>
+        </div>
+        <div class="right-col">
+            {{> feedbackForm}}
+        </div>
+    </div>
+</template>
+
+
+<template name="feedbackForm">
+    <form class="center-form">
+        <div class="heading">
+            <img src="images/tipps.png" class="logo" alt="logo" />
+            <h1>tipps</h1>
+        </div>
+        {{#if finished}}
+        <p class="ingress response">{{responseMsg}}</p>
+        <button type="button"  class="resetBtn" name="button">Gå tilbake</button>
+        {{else}}
+        <p class="ingress">
+            Tipps er en enkel tjeneste som hjelper deg å både bruke og spare penger, <span class="txt-orange">i situasjonen du befinner deg i</span>. Samtidig lar Tipps butikker over hele landet kommunisere med kunder som befinner seg i butikken gjennom enkle, nyttige og ikke minst uforstyrrende Tipps.
+            <br><br>
+            Har du lyst til å prøve tipps? Legg igjen epost-addressen din, så sier vi fra så snart <img class="tipps-icon" src="images/out_64.png" alt=""/> er klart 👍
+        </p>
+        <input type="email" name="emailField" placeholder="Epost" autocomplete="off">
+        <div class="">
+            <button type="submit"  name="button">Gi meg tipps!</button>
+        </div>
+        {{/if}}
+    </form>
+</template>

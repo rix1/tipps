@@ -3,6 +3,13 @@ import { ReactiveVar } from 'meteor/reactive-var';
 
 import './main.html';
 
+
+Template.body.events({
+    'click .loginBtn'(event, instance){
+        console.log("loginBtn Clikced");
+    }
+})
+
 Template.feedbackForm.onCreated(function helloOnCreated() {
     // counter starts at 0
     this.finished = new ReactiveVar(false);
